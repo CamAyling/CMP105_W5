@@ -10,6 +10,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	zomble.setTexture(&zombleWalk);
 	zomble.setSize(sf::Vector2f(55, 108));
 	zomble.setPosition(100, 100);
+	zomble.setInput(input);
 }
 
 Level::~Level()
@@ -20,7 +21,7 @@ Level::~Level()
 // handle user input
 void Level::handleInput(float dt)
 {
-
+	zomble.handleInput();
 }
 
 // Update game objects
