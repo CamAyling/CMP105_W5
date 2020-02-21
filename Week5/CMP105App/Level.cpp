@@ -6,7 +6,10 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
-
+	zombleWalk.loadFromFile("gfx/animZombie.png");
+	zomble.setTexture(&zombleWalk);
+	zomble.setSize(sf::Vector2f(55, 108));
+	zomble.setPosition(100, 100);
 }
 
 Level::~Level()
@@ -23,13 +26,15 @@ void Level::handleInput(float dt)
 // Update game objects
 void Level::update(float dt)
 {
-
+	zomble.update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
+
+	window->draw(zomble);
 
 	endDraw();
 }
