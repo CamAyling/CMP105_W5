@@ -6,9 +6,10 @@
 #include <string>
 #include <iostream>
 #include "Zombie.h"
+#include "Mario.h"
 
 
-class Level{
+class Level {
 public:
 	Level(sf::RenderWindow* hwnd, Input* in);
 	~Level();
@@ -27,6 +28,6 @@ private:
 	Input* input;
 
 	// Added variables for my own purposes
-	Zombie zomble;
-	sf::Texture zombleWalk;
+	Mario mario;
+	sf::Texture marioSheet;
 };
